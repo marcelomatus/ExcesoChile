@@ -168,7 +168,7 @@ def updateExceso(fte,
                  confidence = 0.95,
                  contagio = dt.date(2020,3,2)):
 
-    outputPrefix = 'excesos'
+    outputPrefix = '../output/excesos'
 
     # get the xlsx from the API
     headers = {
@@ -186,6 +186,7 @@ def updateExceso(fte,
 
     fileName = fromDate + '_' + toDate 
 
+    suffix = '../input/' + suffix
     # load the API to a DF
     if False:
         df_API = pd.read_csv(suffix + '_' + fileName + '_ori.csv')
